@@ -422,15 +422,8 @@ if (selected == 'Prediksi Satuan Kerja'):
             KodePangkat = 13
         else :
             KodePangkat = 0
-        
-    with col1:
-        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
-        if NamaJabatan == "Non Pemeriksa" :
-            NamaJabatan = 0
-        else :
-            NamaJabatan = 1
-        
-    with col2:
+            
+     with col2:
         NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
 
         if NamaJurusan == 'Akuntansi':
@@ -443,6 +436,13 @@ if (selected == 'Prediksi Satuan Kerja'):
             NamaJurusan = 3
         else :
             NamaJurusan = 4
+        
+    with col1:
+        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
+        if NamaJabatan == "Non Pemeriksa" :
+            NamaJabatan = 0
+        else :
+            NamaJabatan = 1
         
     with col1:
         NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
