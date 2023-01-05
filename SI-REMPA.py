@@ -453,17 +453,17 @@ if (selected == 'Prediksi Satuan Kerja'):
         #     NamaPendidikan =2
         # if NamaPendidikan == 'SMA':
             # NamaPendidikan =3
-         if NamaPendidikan == 'D1':
+        if NamaPendidikan == 'D1':
             NamaPendidikan =4
-         elif NamaPendidikan == 'D2':
+        elif NamaPendidikan == 'D2':
             NamaPendidikan =5
-         elif NamaPendidikan == 'D3':
+        elif NamaPendidikan == 'D3':
             NamaPendidikan =6
-         elif NamaPendidikan == 'D4/S1':
+        elif NamaPendidikan == 'D4/S1':
             NamaPendidikan =7
-         elif NamaPendidikan == 'S2':
+        elif NamaPendidikan == 'S2':
             NamaPendidikan =8
-         else :
+        else :
             NamaPendidikan = 9
         
         with col3:
