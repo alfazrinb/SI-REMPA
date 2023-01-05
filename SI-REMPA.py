@@ -441,7 +441,7 @@ if (selected == 'Prediksi Satuan Kerja'):
             NamaJurusan = 2
         elif NamaJurusan == 'Manajemen':
             NamaJurusan = 3
-         else :
+        else :
             NamaJurusan = 4
         
     with col1:
