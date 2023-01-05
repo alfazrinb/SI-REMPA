@@ -11,7 +11,7 @@ from streamlit_option_menu import option_menu
 
 
 # loading the saved models
-mutasi_model = pickle.load(open("model_mutasi_pegawai_fix_banget.sav"", "rb"))
+mutasi_model = pickle.load(open("model_mutasi_pegawai_fix_banget.sav", "rb"))
 mutasi_Satker_model = pickle.load(open("model_mutasi_satker.sav", "rb"))
 
 import base64
