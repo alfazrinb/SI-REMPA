@@ -433,20 +433,6 @@ if (selected == 'Prediksi Satuan Kerja'):
 
         
     with col1:
-        NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
-
-        if NamaJurusan == 'Akuntansi':
-            NamaJurusan = 0
-        elif NamaJurusan == 'Bahasa':
-            NamaJurusan = 1
-        elif NamaJurusan == 'Lainnya':
-            NamaJurusan = 2
-        elif NamaJurusan == 'Manajemen':
-            NamaJurusan = 3
-        else :
-            NamaJurusan = 4
-        
-    with col2:
         NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
 
         # if NamaPendidikan == 'SD':
@@ -467,6 +453,20 @@ if (selected == 'Prediksi Satuan Kerja'):
             NamaPendidikan =8
         else :
             NamaPendidikan = 9
+        
+    with col2:
+        NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
+
+        if NamaJurusan == 'Akuntansi':
+            NamaJurusan = 0
+        elif NamaJurusan == 'Bahasa':
+            NamaJurusan = 1
+        elif NamaJurusan == 'Lainnya':
+            NamaJurusan = 2
+        elif NamaJurusan == 'Manajemen':
+            NamaJurusan = 3
+        else :
+            NamaJurusan = 4
         
     with col1:
         JamDiklat = st.text_input('Jumlah Jam Diklat')
