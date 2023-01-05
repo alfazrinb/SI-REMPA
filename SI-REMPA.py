@@ -466,8 +466,8 @@ if (selected == 'Prediksi Satuan Kerja'):
         else :
             NamaPendidikan = 9
         
-        with col3:
-            JamDiklat = st.text_input('Jumlah Jam Diklat')
+    with col2:
+        JamDiklat = st.text_input('Jumlah Jam Diklat')
      
     # code for Prediction
     prediksi_satker = ''
