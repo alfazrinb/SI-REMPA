@@ -62,12 +62,7 @@ if (selected == 'Prediksi Mutasi'):
         Umur = st.slider("Umur",21,65)
     
     with col2:
-        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
-        
-        if NamaJabatan == "Non Pemeriksa" :
-            NamaJabatan = 0
-        else :
-            NamaJabatan = 1
+        MasaKerja = st.slider("Masa Kerja",0,46)
     
     with col1:
         
@@ -104,10 +99,157 @@ if (selected == 'Prediksi Mutasi'):
             KodePangkat = 0
             
     with col2:
-        MasaKerja = st.slider("Masa Kerja",0,46)
+        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
+        
+        if NamaJabatan == "Non Pemeriksa" :
+            NamaJabatan = 0
+        else :
+            NamaJabatan = 1
+#         MasaKerja = st.slider("Masa Kerja",0,46)
     
     with col1:
-        Satker = st.selectbox('Pilih Satuan Kerja', ['Auditorat Utama Investigasi', 'Auditorat Utama Keuangan Negara I', 
+        NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
+
+        # if NamaPendidikan == 'SD':
+        #     NamaPendidikan =1
+        # if NamaPendidikan == 'SMP':
+        #     NamaPendidikan =2
+        # if NamaPendidikan == 'SMA':
+            # NamaPendidikan =3
+        if NamaPendidikan == 'D1':
+            NamaPendidikan =4
+        elif NamaPendidikan == 'D2':
+            NamaPendidikan =5
+        elif NamaPendidikan == 'D3':
+            NamaPendidikan =6
+        elif NamaPendidikan == 'D4/S1':
+            NamaPendidikan =7
+        elif NamaPendidikan == 'S2':
+            NamaPendidikan =8
+        else :
+            NamaPendidikan = 9
+#         Satker = st.selectbox('Pilih Satuan Kerja', ['Auditorat Utama Investigasi', 'Auditorat Utama Keuangan Negara I', 
+#     'Auditorat Utama Keuangan Negara II', 'Auditorat Utama Keuangan Negara III', 'Auditorat Utama Keuangan Negara IV', 
+#     'Auditorat Utama Keuangan Negara V', 'Auditorat Utama Keuangan Negara VI', 'Auditorat Utama Keuangan Negara VII', 
+#     'BPK Perwakilan Provinsi Aceh', 'BPK Perwakilan Provinsi Bali', 'BPK Perwakilan Provinsi Banten', 
+#     'BPK Perwakilan Provinsi Bengkulu', 'BPK Perwakilan Provinsi D.I. Yogyakarta', 'BPK Perwakilan Provinsi DKI Jakarta', 
+#     'BPK Perwakilan Provinsi Gorontalo', 'BPK Perwakilan Provinsi Jambi', 'BPK Perwakilan Provinsi Jawa Barat', 
+#     'BPK Perwakilan Provinsi Jawa Tengah', 'BPK Perwakilan Provinsi Jawa Timur', 'BPK Perwakilan Provinsi Kalimantan Barat', 
+#     'BPK Perwakilan Provinsi Kalimantan Selatan', 'BPK Perwakilan Provinsi Kalimantan Tengah', 'BPK Perwakilan Provinsi Kalimantan Timur', 
+#     'BPK Perwakilan Provinsi Kalimantan Utara', 'BPK Perwakilan Provinsi Kepulauan Bangka Belitung', 'BPK Perwakilan Provinsi Kepulauan Riau', 
+#     'BPK Perwakilan Provinsi Lampung', 'BPK Perwakilan Provinsi Maluku', 'BPK Perwakilan Provinsi Maluku Utara', 
+#     'BPK Perwakilan Provinsi Nusa Tenggara Barat', 'BPK Perwakilan Provinsi Nusa Tenggara Timur', 'BPK Perwakilan Provinsi Papua', 
+#     'BPK Perwakilan Provinsi Papua Barat', 'BPK Perwakilan Provinsi Riau', 'BPK Perwakilan Provinsi Sulawesi Barat', 
+#     'BPK Perwakilan Provinsi Sulawesi Selatan', 'BPK Perwakilan Provinsi Sulawesi Tengah', 'BPK Perwakilan Provinsi Sulawesi Tenggara', 
+#     'BPK Perwakilan Provinsi Sulawesi Utara', 'BPK Perwakilan Provinsi Sumatera Barat', 'BPK Perwakilan Provinsi Sumatera Selatan', 
+#     'BPK Perwakilan Provinsi Sumatera Utara', 'Badan Pendidikan dan Pelatihan Pemeriksaan Keuangan Negara', 'Sekretariat Jendral'])
+
+
+#         if Satker == "Auditorat Utama Investigasi":
+#             Satker = 0
+#         elif Satker == 'Auditorat Utama Keuangan Negara I':
+#             Satker = 1
+#         elif Satker == 'Auditorat Utama Keuangan Negara II':
+#             Satker = 2
+#         elif Satker == 'Auditorat Utama Keuangan Negara III':
+#             Satker = 3
+#         elif Satker == 'Auditorat Utama Keuangan Negara IV':
+#             Satker = 4
+#         elif Satker == 'Auditorat Utama Keuangan Negara V':
+#             Satker = 5
+#         elif Satker == 'Auditorat Utama Keuangan Negara VI':
+#             Satker = 6
+#         elif Satker == 'Auditorat Utama Keuangan Negara VII':
+#             Satker = 7
+#         elif Satker == 'BPK Perwakilan Provinsi Aceh':
+#             Satker = 8
+#         elif Satker == 'BPK Perwakilan Provinsi Bali':
+#             Satker = 9
+#         elif Satker == 'BPK Perwakilan Provinsi Banten':
+#             Satker = 10
+#         elif Satker == 'BPK Perwakilan Provinsi Bengkulu':
+#             Satker = 11
+#         elif Satker == 'BPK Perwakilan Provinsi D.I. Yogyakarta':
+#             Satker = 12
+#         elif Satker == 'BPK Perwakilan Provinsi DKI Jakarta':
+#             Satker = 13
+#         elif Satker == 'BPK Perwakilan Provinsi Gorontalo':
+#             Satker = 14
+#         elif Satker == 'BPK Perwakilan Provinsi Jambi':
+#             Satker = 15
+#         elif Satker == 'BPK Perwakilan Provinsi Jawa Barat':
+#             Satker = 16
+#         elif Satker == 'BPK Perwakilan Provinsi Jawa Tengah':
+#             Satker = 17
+#         elif Satker == 'BPK Perwakilan Provinsi Jawa Timur':
+#             Satker = 18
+#         elif Satker == 'BPK Perwakilan Provinsi Kalimantan Barat':
+#             Satker = 19
+#         elif Satker == 'BPK Perwakilan Provinsi Kalimantan Selatan':
+#             Satker = 20
+#         elif Satker == 'BPK Perwakilan Provinsi Kalimantan Tengah':
+#             Satker = 21
+#         elif Satker == 'BPK Perwakilan Provinsi Kalimantan Timur':
+#             Satker = 22
+#         elif Satker == 'BPK Perwakilan Provinsi Kalimantan Utara':
+#             Satker = 23
+#         elif Satker == 'BPK Perwakilan Provinsi Kepulauan Bangka Belitung':
+#             Satker = 24
+#         elif Satker == 'BPK Perwakilan Provinsi Kepulauan Riau':
+#             Satker = 25
+#         elif Satker == 'BPK Perwakilan Provinsi Lampung':
+#             Satker = 26
+#         elif Satker == 'BPK Perwakilan Provinsi Maluku':
+#             Satker = 27
+#         elif Satker == 'BPK Perwakilan Provinsi Maluku Utara':
+#             Satker = 28
+#         elif Satker == 'BPK Perwakilan Provinsi Nusa Tenggara Barat':
+#             Satker = 29
+#         elif Satker == 'BPK Perwakilan Provinsi Nusa Tenggara Timur':
+#             Satker = 30
+#         elif Satker == 'BPK Perwakilan Provinsi Papua':
+#             Satker  =31
+#         elif Satker == 'BPK Perwakilan Provinsi Papua Barat':
+#             Satker  = 32 
+#         elif Satker == "BPK Perwakilan Provinsi Riau":
+#             Satker = 33
+#         elif Satker == 'BPK Perwakilan Provinsi Sulawesi Barat':
+#             Satker = 34
+#         elif Satker == 'BPK Perwakilan Provinsi Sulawesi Selatan':
+#             Satker = 35
+#         elif Satker == 'BPK Perwakilan Provinsi Sulawesi Tengah':
+#             Satker = 36 
+#         elif Satker == 'BPK Perwakilan Provinsi Sulawesi Tenggara':
+#             Satker = 37
+#         elif Satker == 'BPK Perwakilan Provinsi Sulawesi Utara':
+#             Satker = 38
+#         elif Satker == 'BPK Perwakilan Provinsi Sumatera Barat':
+#             Satker = 39
+#         elif Satker == 'BPK Perwakilan Provinsi Sumatera Selatan':
+#             Satker = 40
+#         elif Satker == 'BPK Perwakilan Provinsi Sumatera Utara':
+#             Satker = 41
+#         elif Satker == 'Badan Pendidikan dan Pelatihan Pemeriksaan Keuangan Negara':
+#             Satker = 42
+#         else :
+#             Satker = 43
+            
+        with col2:
+            NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
+
+            if NamaJurusan == 'Akuntansi':
+                NamaJurusan = 0
+            elif NamaJurusan == 'Bahasa':
+                NamaJurusan = 1
+            elif NamaJurusan == 'Lainnya':
+                NamaJurusan = 2
+            elif NamaJurusan == 'Manajemen':
+                NamaJurusan = 3
+            else :
+                NamaJurusan = 4
+                
+        with col1:
+            Satker = st.selectbox('Pilih Satuan Kerja', ['Auditorat Utama Investigasi', 'Auditorat Utama Keuangan Negara I', 
     'Auditorat Utama Keuangan Negara II', 'Auditorat Utama Keuangan Negara III', 'Auditorat Utama Keuangan Negara IV', 
     'Auditorat Utama Keuangan Negara V', 'Auditorat Utama Keuangan Negara VI', 'Auditorat Utama Keuangan Negara VII', 
     'BPK Perwakilan Provinsi Aceh', 'BPK Perwakilan Provinsi Bali', 'BPK Perwakilan Provinsi Banten', 
@@ -212,42 +354,26 @@ if (selected == 'Prediksi Mutasi'):
             Satker = 42
         else :
             Satker = 43
-            
-        with col2:
-            NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
+#             NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
 
-            if NamaJurusan == 'Akuntansi':
-                NamaJurusan = 0
-            elif NamaJurusan == 'Bahasa':
-                NamaJurusan = 1
-            elif NamaJurusan == 'Lainnya':
-                NamaJurusan = 2
-            elif NamaJurusan == 'Manajemen':
-                NamaJurusan = 3
-            else :
-                NamaJurusan = 4
-                
-        with col1:                
-            NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
-
-        # if NamaPendidikan == 'SD':
-        #     NamaPendidikan =1
-        # if NamaPendidikan == 'SMP':
-        #     NamaPendidikan =2
-        # if NamaPendidikan == 'SMA':
-            # NamaPendidikan =3
-        if NamaPendidikan == 'D1':
-            NamaPendidikan =4
-        elif NamaPendidikan == 'D2':
-            NamaPendidikan =5
-        elif NamaPendidikan == 'D3':
-            NamaPendidikan =6
-        elif NamaPendidikan == 'D4/S1':
-            NamaPendidikan =7
-        elif NamaPendidikan == 'S2':
-            NamaPendidikan =8
-        else :
-            NamaPendidikan = 9
+#         # if NamaPendidikan == 'SD':
+#         #     NamaPendidikan =1
+#         # if NamaPendidikan == 'SMP':
+#         #     NamaPendidikan =2
+#         # if NamaPendidikan == 'SMA':
+#             # NamaPendidikan =3
+#         if NamaPendidikan == 'D1':
+#             NamaPendidikan =4
+#         elif NamaPendidikan == 'D2':
+#             NamaPendidikan =5
+#         elif NamaPendidikan == 'D3':
+#             NamaPendidikan =6
+#         elif NamaPendidikan == 'D4/S1':
+#             NamaPendidikan =7
+#         elif NamaPendidikan == 'S2':
+#             NamaPendidikan =8
+#         else :
+#             NamaPendidikan = 9
  
         with col2:
             JamDiklat = st.text_input('Jumlah Jam Diklat')
