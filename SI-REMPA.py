@@ -423,7 +423,7 @@ if (selected == 'Prediksi Satuan Kerja'):
         else :
             KodePangkat = 0
             
-     with col2:
+    with col2:
         NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
 
         if NamaJurusan == 'Akuntansi':
@@ -444,7 +444,7 @@ if (selected == 'Prediksi Satuan Kerja'):
         else :
             NamaJabatan = 1
         
-    with col1:
+    with col2:
         NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
 
         # if NamaPendidikan == 'SD':
@@ -466,7 +466,7 @@ if (selected == 'Prediksi Satuan Kerja'):
         else :
             NamaPendidikan = 9
         
-    with col2:
+    with col1:
         JamDiklat = st.text_input('Jumlah Jam Diklat')
      
     # code for Prediction
