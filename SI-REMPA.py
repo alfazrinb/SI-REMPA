@@ -11,8 +11,8 @@ from streamlit_option_menu import option_menu
 
 
 # loading the saved models
-mutasi_model = pickle.load(open("C:\\Users\\Miqbalkt\\OneDrive\\Documents\\DAC\\SI-REMPA\\model_mutasi_satker.sav", "rb"))
-mutasi_Satker_model = pickle.load(open("C:\\Users\\Miqbalkt\\OneDrive\\Documents\\DAC\\SI-REMPA\\model_mutasi_satker.sav", "rb"))
+mutasi_model = pickle.load(open("model_mutasi_pegawai_fix_banget.sav"", "rb"))
+mutasi_Satker_model = pickle.load(open("model_mutasi_satker.sav", "rb"))
 
 import base64
 def add_bg_from_local(image_file):
