@@ -388,11 +388,7 @@ if (selected == 'Prediksi Satuan Kerja'):
         Umur = st.slider("Umur",21,65)
         
     with col2:
-        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
-        if NamaJabatan == "Non Pemeriksa" :
-            NamaJabatan = 0
-        else :
-            NamaJabatan = 1
+        MasaKerja = st.slider("Masa Kerja",0,46)
     
     with col1:
         KodePangkat = st.selectbox('Pangkat/Golongan',["II/A",'II/B',"II/C","II/D","III/A","III/B","III/C",
@@ -428,7 +424,11 @@ if (selected == 'Prediksi Satuan Kerja'):
             KodePangkat = 0
         
     with col1:
-        MasaKerja = st.slider("Masa Kerja",0,46)
+        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
+        if NamaJabatan == "Non Pemeriksa" :
+            NamaJabatan = 0
+        else :
+            NamaJabatan = 1
         
     with col2:
         NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
