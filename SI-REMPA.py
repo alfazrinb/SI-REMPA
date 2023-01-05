@@ -47,7 +47,7 @@ if (selected == 'Prediksi Mutasi'):
     
     # page title
     # st.title('Prediksi Mutasi Pegawai Dengan Machine Learning')
-    st.markdown("<h1 style='text-align: center; color: Black;'>Prediksi Mutasi Pegawai Dengan Machine Learning</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: Black;'>Prediksi Mutasi Pegawai BPK RI</h1>", unsafe_allow_html=True)
     
     
     # getting the input data from the user
@@ -362,7 +362,7 @@ if (selected == 'Prediksi Satuan Kerja'):
     
     # page title
     # st.title('Heart Disease Prediction using ML')
-    st.markdown("<h1 style='text-align: center; color: Black;'>Prediksi Mutasi Satuan Kerja Dengan Machine Learning</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: Black;'>Prediksi Mutasi Satuan Kerja Pegawai BPK RI</h1>", unsafe_allow_html=True)
     
     Nama = st.text_input('Nama Pegawai')
     Nip = st.text_input('NIP Pegawai')
