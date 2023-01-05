@@ -260,13 +260,13 @@ if (selected == 'Prediksi Mutasi'):
     
     if st.button('Submit'):
         prediksi_mutasi = mutasi_model.predict([[
-            Umur, 
-            NamaJabatan, 
+            Umur,
+            MasaKerja,
             KodePangkat, 
-            MasaKerja, 
-            Satker, 
+            NamaJabatan,
+            NamaPendidikan,
             NamaJurusan, 
-            NamaPendidikan, 
+            Satker,
             JamDiklat]])
         
 
