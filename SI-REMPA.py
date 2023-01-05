@@ -372,91 +372,102 @@ def get_str(n,Nama,Nip):
 # Heart Disease Prediction Page
 if (selected == 'Prediksi Satuan Kerja'):
     
+    
     # page title
     # st.title('Heart Disease Prediction using ML')
     st.markdown("<h1 style='text-align: center; color: Black;'>Prediksi Mutasi Satuan Kerja Pegawai BPK RI</h1>", unsafe_allow_html=True)
     
-    Nama = st.text_input('Nama Pegawai')
-    Nip = st.text_input('NIP Pegawai')
-
-    Umur = st.slider("Umur",21,65)
+    col1, col2 = st.columns(2)
+    with col1: 
+        Nama = st.text_input('Nama Pegawai')
+    
+    with col2:
+        Nip = st.text_input('NIP Pegawai')
+    
+    with col1:
+        Umur = st.slider("Umur",21,65)
         
-    NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
-        
-    if NamaJabatan == "Non Pemeriksa" :
-        NamaJabatan = 0
-    else :
-        NamaJabatan = 1
-
-    KodePangkat = st.selectbox('Pangkat/Golongan',["II/A",'II/B',"II/C","II/D","III/A","III/B","III/C",
+    with col2:
+        NamaJabatan = st.selectbox('Jabatan', ["Non Pemeriksa","Pemeriksa"])
+        if NamaJabatan == "Non Pemeriksa" :
+            NamaJabatan = 0
+        else :
+            NamaJabatan = 1
+    
+    with col1:
+        KodePangkat = st.selectbox('Pangkat/Golongan',["II/A",'II/B',"II/C","II/D","III/A","III/B","III/C",
     "III/D",'IV/A','IV/B','IV/C','IV/D','IV/E'])
 
     # if KodePangkat == "I/D":
     #     KodePangkat = 1
-    if KodePangkat == "II/B":
-        KodePangkat = 2
-    elif KodePangkat == "II/C":
-        KodePangkat = 3
-    elif KodePangkat == "II/D":
-        KodePangkat = 4
-    elif KodePangkat == "III/A":
-        KodePangkat = 5
-    elif KodePangkat == "II/B":
-        KodePangkat = 6
-    elif KodePangkat == "III/C":
-        KodePangkat = 7
-    elif KodePangkat == "III/D":
-        KodePangkat = 8
-    elif KodePangkat == "IV/A":
-        KodePangkat = 9
-    elif KodePangkat == "IV/B":
-        KodePangkat = 10
-    elif KodePangkat == "IV/C":
-        KodePangkat = 11
-    elif KodePangkat == "IV/D":
-        KodePangkat = 12
-    elif KodePangkat == "IV/E":
-        KodePangkat = 13
-    else :
-        KodePangkat = 0
-    
-    MasaKerja = st.slider("Masa Kerja",0,46)
+        if KodePangkat == "II/B":
+            KodePangkat = 2
+        elif KodePangkat == "II/C":
+            KodePangkat = 3
+        elif KodePangkat == "II/D":
+            KodePangkat = 4
+        elif KodePangkat == "III/A":
+            KodePangkat = 5
+        elif KodePangkat == "II/B":
+            KodePangkat = 6
+        elif KodePangkat == "III/C":
+            KodePangkat = 7
+        elif KodePangkat == "III/D":
+            KodePangkat = 8
+        elif KodePangkat == "IV/A":
+            KodePangkat = 9
+        elif KodePangkat == "IV/B":
+            KodePangkat = 10
+        elif KodePangkat == "IV/C":
+            KodePangkat = 11
+        elif KodePangkat == "IV/D":
+            KodePangkat = 12
+        elif KodePangkat == "IV/E":
+            KodePangkat = 13
+        else :
+            KodePangkat = 0
+        
+    with col1:
+        MasaKerja = st.slider("Masa Kerja",0,46)
+        
+    with col2:
+        NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
 
-    NamaJurusan = st.selectbox('Jurusan', ['Akuntansi','Bahasa & Sastra','Jurusan Lainnya','Manajemen','Teknik'])
+        if NamaJurusan == 'Akuntansi':
+            NamaJurusan = 0
+        elif NamaJurusan == 'Bahasa':
+            NamaJurusan = 1
+        elif NamaJurusan == 'Lainnya':
+            NamaJurusan = 2
+        elif NamaJurusan == 'Manajemen':
+            NamaJurusan = 3
+         else :
+            NamaJurusan = 4
+        
+    with col1:
+        NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
 
-    if NamaJurusan == 'Akuntansi':
-        NamaJurusan = 0
-    elif NamaJurusan == 'Bahasa':
-        NamaJurusan = 1
-    elif NamaJurusan == 'Lainnya':
-        NamaJurusan = 2
-    elif NamaJurusan == 'Manajemen':
-        NamaJurusan = 3
-    else :
-        NamaJurusan = 4
-    
-    NamaPendidikan = st.selectbox('Strata Pendidikan',['D1','D2','D3','D4/S1','S2','S3'])
-
-    # if NamaPendidikan == 'SD':
-    #     NamaPendidikan =1
-    # if NamaPendidikan == 'SMP':
-    #     NamaPendidikan =2
-    # if NamaPendidikan == 'SMA':
-        # NamaPendidikan =3
-    if NamaPendidikan == 'D1':
-        NamaPendidikan =4
-    elif NamaPendidikan == 'D2':
-        NamaPendidikan =5
-    elif NamaPendidikan == 'D3':
-        NamaPendidikan =6
-    elif NamaPendidikan == 'D4/S1':
-        NamaPendidikan =7
-    elif NamaPendidikan == 'S2':
-        NamaPendidikan =8
-    else :
-        NamaPendidikan = 9
-
-    JamDiklat = st.text_input('Jumlah Jam Diklat')
+        # if NamaPendidikan == 'SD':
+        #     NamaPendidikan =1
+        # if NamaPendidikan == 'SMP':
+        #     NamaPendidikan =2
+        # if NamaPendidikan == 'SMA':
+            # NamaPendidikan =3
+         if NamaPendidikan == 'D1':
+            NamaPendidikan =4
+         elif NamaPendidikan == 'D2':
+            NamaPendidikan =5
+         elif NamaPendidikan == 'D3':
+            NamaPendidikan =6
+         elif NamaPendidikan == 'D4/S1':
+            NamaPendidikan =7
+         elif NamaPendidikan == 'S2':
+            NamaPendidikan =8
+         else :
+            NamaPendidikan = 9
+        
+        with col3:
+            JamDiklat = st.text_input('Jumlah Jam Diklat')
      
     # code for Prediction
     prediksi_satker = ''
